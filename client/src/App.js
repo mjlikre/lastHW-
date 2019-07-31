@@ -25,7 +25,7 @@ class App extends Component {
   handleFormSubmit = event => {
     // When the form is submitted, prevent its default behavior, get Books update the Books state
     event.preventDefault();
-    API.getBooks(this.state.BookSearch)
+    API.searchBooks(this.state.BookSearch)
       .then(res => {
         console.log(res.data);
         this.setState({ Books: res.data });
